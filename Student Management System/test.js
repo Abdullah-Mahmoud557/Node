@@ -1,7 +1,8 @@
  const students = [] ;
 
 function addStudent(name, score) {
-   if (name === undefined || score === undefined ) console.log("missing info" )  ;
+   if (name === undefined || typeof name !== "string" || typeof score !== "number" || score === undefined ) 
+    console.log("Invalid input")  ;
    else {
        let studentName = findStudentByName(name);
           if (studentName !== null ) {
